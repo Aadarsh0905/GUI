@@ -1,0 +1,53 @@
+package GUI;
+
+import javax.swing.*;
+
+//By Defining in main
+//public class FirstSwing {
+//    public static void main(String[] args) {
+//        JFrame f=new JFrame("First Swing Example");
+//        JButton b=new JButton("Click");
+//        b.setBounds(130,100,100,40);
+//        f.setSize(400,500);
+//        f.add(b);
+//        f.setLayout(null);
+//        f.setVisible(true);
+//
+//    }
+//}
+
+
+// By constructor defining
+//public class FirstSwing{
+//    JFrame f;
+//    FirstSwing(){
+//        f=new JFrame("First Swing Example");
+//        JButton b=new JButton("Click");
+//        b.setBounds(130,100,100,40);
+//        f.setSize(400,500);
+//        f.add(b);
+//        f.setLayout(null);
+//        f.setVisible(true);
+//    }
+//
+//    public static void main(String[] args) {
+//        new FirstSwing();
+//    }
+//}
+
+
+//By Inheritance
+public class FirstSwing extends JFrame{
+    FirstSwing(){
+        JButton b=new JButton("Click me");
+        b.setBounds(130,100,100,40);
+        add(b);
+        setSize(400,500);
+        setLayout(null);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new FirstSwing();
+    }
+}
