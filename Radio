@@ -1,0 +1,52 @@
+package GUI;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+public class RadioButExample {
+    public static void main(String[] args) {
+        JFrame f=new JFrame("Example Radio");
+        JRadioButton r1=new JRadioButton("A) Male");
+        JRadioButton r2=new JRadioButton("B)Female");
+        r1.setBounds(75,50,100,30);
+        r2.setBounds(75,100,100,30);
+
+        String country[]={"India","USA","Asia","England"};
+        JComboBox cb=new JComboBox(country);
+        cb.setBounds(30,150,120,40);
+
+        String data[][]={{"101","Amit","67000"},
+                {"102","Ankit","78000"},
+                {"103","Aman","90000"}};
+        String column[]={"ID","Name","Salary"};
+        JTable jt=new JTable(data,column);
+        jt.setBounds(30,200,200,70);
+        f.add(jt);
+
+        DefaultListModel<String> l1=new DefaultListModel<>();
+        l1.addElement("Item1");
+        l1.addElement("Item2");
+        l1.addElement("Item3");
+        JList<String> list=new JList<>(l1);
+        list.setBounds(50,300,70,80);
+        f.add(list);
+
+        JOptionPane.showMessageDialog(f,"Hello,Welcome to IIT Kharagpur");
+
+//        JScrollBar s=new JScrollBar();
+//        s.setBounds(100,120,60,80);
+//        f.add(s);
+
+
+
+        ButtonGroup bg=new ButtonGroup();
+        bg.add(r1);
+        bg.add(r2);
+        f.add(r1);
+        f.add(r2);
+        f.add(cb);
+        f.setSize(300,300);
+        f.setLayout(null);
+        f.setVisible(true);
+    }
+}
